@@ -25,7 +25,7 @@ public class DmbCellPhoneExample {
 		dmbCellPhone.sendVoice("아~ 예 반갑습니다.");
 		dmbCellPhone.hangUp();
 		
-		//DmbCellPhone 틀래스의 메소드 호출
+		//DmbCellPhone 클래스의 메소드 호출
 		dmbCellPhone.turnOnDmb();
 		dmbCellPhone.changeChannelDmb(12);
 		dmbCellPhone.turnOffDmb();
