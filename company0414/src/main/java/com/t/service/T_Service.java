@@ -69,7 +69,7 @@ public class T_Service {
 	}
 	
 	
-
+	//엑셀다운로드 메소드 
 	public void getListByExcel(ModelMap model, DataBox dataBox, DataBox userMap)  throws Exception  {
 	
 		
@@ -99,8 +99,8 @@ public class T_Service {
 		List<DataBox> list = t_Mapper.selectListExcelData(box);
 	
 		// 엑셀 추가 사항
-			data.put("headerName", dataBox.get("header_name").toString());
-			data.put("dbcolName", dataBox.get("dbcol_name").toString());
+			data.put("headerName", dataBox.get("header_name").toString()); //엑셀켰을때 헤더 이름 
+			data.put("dbcolName", dataBox.get("dbcol_name").toString());  // 엑셀켰을때 디비 칼럼명
 	
 		
 		data.put("list", list);
@@ -116,6 +116,8 @@ public class T_Service {
 		model.addAttribute("data", data);
 		model.addAttribute("fileName", "내역"+yearMonthDay.format(date));
 	
+		//model에 담은건 함수끼리 연결되어 있어서  return을 기재 안해도 자동으로 리턴으로 인해 Controller 로 돌아간다.
+		
 	
 }
 	

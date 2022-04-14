@@ -1,8 +1,8 @@
+<script type="text/javascript">
 
 
-<script type="text/javascript">	
-	$(document).ready(function() {
-		
+	$(document).ready(function() {  // 지금 이 소스에서는 현재문서(document)를 // ready(function(){}); -> 항상 준비해놓겠다.
+									
 		$("#start_dh").val('${data.start_dh}');
 		$("#end_dh").val('${data.end_dh}');
 		$("#").val('${data.}');
@@ -86,7 +86,6 @@
 				$("#excelForm").submit();
 			}
 		});
-
+  
 </script>       
-       
        
