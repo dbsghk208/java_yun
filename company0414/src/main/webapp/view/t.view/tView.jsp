@@ -1,5 +1,27 @@
 <script type="text/javascript">
 
+/* 
+스크립트 코드
+
+1)
+$(document).ready(function() {
+$().click(function(e) { });
+function
+});
+
+2)
+$(document).ready(function) {
+init();
+checkForm();
+});
+
+function checkForm() { };
+function init() { };
+
+3)
+$(function() { });
+*/
+
 
 	$(document).ready(function() {  // 지금 이 소스에서는 현재문서(document)를 // ready(function(){}); -> 항상 준비해놓겠다.
 									
