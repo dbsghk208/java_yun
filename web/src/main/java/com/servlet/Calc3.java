@@ -16,11 +16,11 @@ public class Calc3 extends HttpServlet {
 
 	protected void service(HttpServletRequest request,HttpServlet response) throws ServletException, IOException {
 			
-			ServletContext application = request.getServletContext(); //¾îÇÃ¸®ÄÉÀÌ¼Ç ÀúÀå¼Ò
-			HttpSession session = request.getSession();// ¼¼¼ÇÀ» ¾ò¾î¿À±â
-			//¼¼¼ÇÀ» º¯¼öÈ­
-			Cookie[] cookies = request.getCookies();  //ÄíÅ°°¡ ¹è¿­·Î ¿À±â¶§¹®¿¡ ¹è¿­·Î ¼±¾ğÇÑ´Ù. Å°¿Í º§·ù°ªÀ» ´ã¾Æ¼­ ¿À´Âµ¥ ±×°É ¿©·¯°³ º¸³¾¼öµµ ÀÕÀ¸´Ï±î!
-			//»ç¿ëÀÚ°¡ º¸³»ÁØ ÄíÅ° ÀĞ±â
+			ServletContext application = request.getServletContext();  //ì–´í”Œë¦¬ì¼€ì´ì…˜ ì €ì¥ì†Œ
+			HttpSession session = request.getSession(); // ì„¸ì…˜ì„ ì–»ì–´ì˜¤ê¸°
+			//ì„¸ì…˜ì„ ë³€ìˆ˜í™”
+			Cookie[] cookies = request.getCookies();  //ì¿ í‚¤ê°€ ë°°ì—´ë¡œ ì˜¤ê¸°ë•Œë¬¸ì— ë°°ì—´ë¡œ ì„ ì–¸í•œë‹¤. í‚¤ì™€ ë²¨ë¥˜ê°’ì„ ë‹´ì•„ì„œ ì˜¤ëŠ”ë° ê·¸ê±¸ ì—¬ëŸ¬ê°œ ë³´ë‚¼ìˆ˜ë„ ì‡ìœ¼ë‹ˆê¹Œ!
+			//ì‚¬ìš©ìê°€ ë³´ë‚´ì¤€ ì¿ í‚¤ ì½ê¸°
 			
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
@@ -30,35 +30,35 @@ public class Calc3 extends HttpServlet {
 			
 			int v = 0;
 			if(!v_.equals("")) v = Integer.parseInt(v_);
-			//°ªÀ» ¹Ş´Â°Í
+			//ê°’ì„ ë°›ëŠ”ê²ƒ
 			
 			
-			//°è»ê
-			if(op.equals("=")) {  //ÀÌÄİÀº °è»ê
+			//ê³„ì‚°
+			if(op.equals("=")) { //ì´ì½œì€ ê³„ì‚°
 				
-						//°ªÀ» ²¨³»´ÂÀÛ¾÷. ¿ø·¡´Â ¿ÀºêÁ§Æ®·Î °ªÀ» ¹İÈ¯ÇÑ´Ù.
-				//int x = (Integer)application.getAttribute("value");     //¾îÇÃ¸®ÄÉÀÌ¼ÇÀúÀå¼Ò¿¡ ´ã°ÜÁø °ª,Àü´ŞµÈ°ª  
+				//ê°’ì„ êº¼ë‚´ëŠ”ì‘ì—…. ì›ë˜ëŠ” ì˜¤ë¸Œì íŠ¸ë¡œ ê°’ì„ ë°˜í™˜í•œë‹¤.
+				//int x = (Integer)application.getAttribute("value");     //ì–´í”Œë¦¬ì¼€ì´ì…˜ì €ì¥ì†Œì— ë‹´ê²¨ì§„ ê°’,ì „ë‹¬ëœê°’  
 				//int x = (Integer)session.getAttribute("value"); 
-				//ÄíÅ°¸¦ ±×¾È¿¡¼­ ¹İº¹¹®À» ÅëÇØ Ã£¾Æ¼­ ÀĞÇôÁö´Ï±ñ for¹®À» ¾´´Ù
+				//ì¿ í‚¤ë¥¼ ê·¸ì•ˆì—ì„œ ë°˜ë³µë¬¸ì„ í†µí•´ ì°¾ì•„ì„œ ì½í˜€ì§€ë‹ˆê¹ forë¬¸ì„ ì“´ë‹¤
 				int x = 0;
 				
-				for(Cookie c : cookies)  //ÄíÅ°°¡ °¡Áø ¹è¿­ÀÇ °¹¼ö¸¦ µµ´Â for¹®
-					if(c.getName().equals("value"))  {//ÀÌ¸§À¸·Î °Ë»öÇÑÈÄ
+				for(Cookie c : cookies)  //ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ forï¿½ï¿½
+					if(c.getName().equals("value"))  {//ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½
 						x = Integer.parseInt(c.getValue());
-						break;  //Ã£¾ÒÀ¸¸é ³ª¿À´Â°Í.
+						break;  //Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Â°ï¿½.
 					}
 					
 					
-				int y = v;	//Áö±İ »ç¿ëÀÚ°¡ Àü´ŞÇÑ °ª	
+				int y = v;	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½	
 				//String opertator = (String)application.getAttribute("op");
 				//String opertator = (String)session.getAttribute("op");
 				
 				
 				String operator = "";
-				for(Cookie c : cookies)  //ÄíÅ°°¡ °¡Áø ¹è¿­ÀÇ °¹¼ö¸¦ µµ´Â for¹®
-					if(c.getName().equals("op"))  {//ÀÌ¸§À¸·Î °Ë»öÇÑÈÄ
+				for(Cookie c : cookies)  //ì¿ í‚¤ê°€ ê°€ì§„ ë°°ì—´ì˜ ê°¯ìˆ˜ë¥¼ ë„ëŠ” forë¬¸
+					if(c.getName().equals("op"))  {//ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•œí›„
 						operator = c.getValue();
-						break;  //Ã£¾ÒÀ¸¸é ³ª¿À´Â°Í.
+						break;  //ì°¾ì•˜ìœ¼ë©´ ë‚˜ì˜¤ëŠ”ê²ƒ.
 					}
 				
 				
@@ -73,22 +73,23 @@ public class Calc3 extends HttpServlet {
 				response.getWriter().printf("result is %d\n", result); 
 			}
 			
-			//°ªÀúÀå µ¡¼À»¬¼ÀÀº ÀúÀå                              //request°¡ °¡Áö°í ÀÖ´Â ÇÔ¼ö
+			//ê°’ì €ì¥ ë§ì…ˆëº„ì…ˆì€ ì €ì¥                              //requestê°€ ê°€ì§€ê³  ìˆëŠ” í•¨ìˆ˜
 			else {
 				
-//				application.setAttribute("value", v);  //°ªÀ» ´ã´Â ÀÛ¾÷
+//				application.setAttribute("value", v);  //ê°’ì„ ë‹´ëŠ” ì‘ì—…
 //				application.setAttribute("op", op);
-//				session.setAttribute("value", v);  //°ªÀ» ´ã´Â ÀÛ¾÷
+//				session.setAttribute("value", v);  //ê°’ì„ ë‹´ëŠ” ì‘ì—…
 //				session.setAttribute("op", op);
 				
-				Cookie valueCookie = new Cookie("value",String.valueOf(v));  //cookie °ªÀ¸·Î´Â ¹İµå½Ã url ¿¡ »ç¿ëÇÒ¼ö ÀÖ´ÂÇüÅÂÀÇ ¹®ÀÚ¿­·Î¸¸ º¸³¾¼ö ÀÖ´Ù.
+				Cookie valueCookie = new Cookie("value",String.valueOf(v));  //cookie ê°’ìœ¼ë¡œëŠ” ë°˜ë“œì‹œ url ì— ì‚¬ìš©í• ìˆ˜ ìˆëŠ”í˜•íƒœì˜ ë¬¸ìì—´ë¡œë§Œ ë³´ë‚¼ìˆ˜ ìˆë‹¤.
 				Cookie opCookie = new Cookie("op", op);
 				
-				response.addCookie(valueCookie); // Å¬¶óÀÌ¾ğÆ®¿¡°Ô Àü´ŞÀÌ µÈ´Ù.
+				response.addCookie(valueCookie); // í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ì „ë‹¬ì´ ëœë‹¤.
 				response.addCookie(opCookie);
 			}
 				
 	}
+
 
 	
 }

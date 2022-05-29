@@ -14,23 +14,26 @@ protected void service(HttpServletRequest request,HttpServlet response) throws S
 		
 		response.setContentType("text/html; charset=UTF-8");
 		
-		String [] num_ = request.getParameterValues("num");  //µ¿ÀÏÇÑ ÀÌ¸§À¸·Î ¿©·¯°³¿Ã¶§´Â getParameter ´ë½Å getParameterValues
+		String [] num_ = request.getParameterValues("num");  //ë™ì¼í•œ ì´ë¦„ìœ¼ë¡œ ì—¬ëŸ¬ê°œì˜¬ë•ŒëŠ” getParameter ëŒ€ì‹  getParameterValues
+		
 		
 		int result = 0;
 		
-		//¹İº¹
+
+		//ë°˜ë³µ
+	//ë°°ì—´ë¡œ í•œë²ˆì— ë°›ì•„ì„œ ë°˜ë³µë¬¸ì„ ì¨ì„œ ê³„ì‚°ì„ í•  ìˆ˜ ìˆë‹¤.
 		for(int i=0; i<num.length; i++ ) {
 			int num = Integer.parseInt(num_[i]);
-			//¿¬»êÀº ¹İº¹µÇÁö¸¸ ¼±¾ğÀº ¹İº¹µÇ´Â ÀÏÀÌ ¾ø´Ù.
-			//±×·¡¼­ for¹® ¾È¿¡ º¯¼ö ¼±¾ğ ÇØÁàµµ µÊ
+			//ì—°ì‚°ì€ ë°˜ë³µë˜ì§€ë§Œ ì„ ì–¸ì€ ë°˜ë³µë˜ëŠ” ì¼ì´ ì—†ë‹¤.
+			//ê·¸ë˜ì„œ forë¬¸ ì•ˆì— ë³€ìˆ˜ ì„ ì–¸ í•´ì¤˜ë„ ë¨
 			
 			result+=num;
 		}
 		
 			
 		response.getWriter().printf("result is %d\n", result); 
-		// num ¹è¿­µéÀÌ ±¸ºĞµÇ¼­ °¬´Âµ¥
-		//°°ÀºÀÌ¸§À¸·Î Àü´ŞµÈ Å°°ªµéÀ» ¼­¹ö¿¡¼­ ¹è¿­·Î »ç¿ëÇÒ¼ö ÀÕµµ·Ï ÇÑ´Ù´Â°Í
+		// num ë°°ì—´ë“¤ì´ êµ¬ë¶„ë˜ì„œ ê°”ëŠ”ë°
+		//ê°™ì€ì´ë¦„ìœ¼ë¡œ ì „ë‹¬ëœ í‚¤ê°’ë“¤ì„ ì„œë²„ì—ì„œ ë°°ì—´ë¡œ ì‚¬ìš©í• ìˆ˜ ìˆë„ë¡ í•œë‹¤ëŠ”ê²ƒ
 	}
 	
 }

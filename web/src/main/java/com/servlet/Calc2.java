@@ -1,5 +1,11 @@
 package com.servlet;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 @WebServlet("/calc2")
 public class Calc2 extends HttpServlet {
@@ -21,7 +27,7 @@ public class Calc2 extends HttpServlet {
 			
 			int reault = 0;
 			
-			if(op.equals("µ¡¼À"))
+			if(op.equals("ï¿½ï¿½ï¿½ï¿½"))
 					result = x+y;
 			else
 					result = x-y;
