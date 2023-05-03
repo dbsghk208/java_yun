@@ -6,15 +6,15 @@ public class VariableUseExample {
 		
 		int hour =3;
 		int minute =5;
-		System.out.println(hour+ "½Ã°£" + minute+ "ºĞ");
+		System.out.println(hour+ "ì‹œê°„" + minute+ "ë¶„");
 		
 		int totalMinute = (hour*60)+minute;
-		// int totalMinute = (3*60) + minute;  //º¯¼ö hour ¿¡ ÀúÀåµÈ °ªÀ¸·Î ´ëÄ¡
-		// int totalMinute = 180 + 5;   //º¯¼ö minute¿¡ ÀúÀåµÈ °ªÀ¸·Î ´ëÄ¡
-		// int totalMinute = 185;  // 185¸¦ º¯¼ö totalMinute ¿¡ ÀúÀå
+		// int totalMinute = (3*60) + minute;  //ë³€ìˆ˜ hour ì— ì €ì¥ëœ ê°’ìœ¼ë¡œ ëŒ€ì¹˜
+		// int totalMinute = 180 + 5;   //ë³€ìˆ˜ minute ì— ì €ì¥ëœ ê°’ìœ¼ë¡œ ëŒ€ì¹˜
+		// int totalMinute = 185;  // 185ë¥¼ ë³€ìˆ˜ totalMinute ì— ì €ì¥
 		
 		
-		System.out.println("ÃÑ "+ totalMinute + "ºĞ");
+		System.out.println("ì´"+ totalMinute + "ë¶„");
 
 	}
 
