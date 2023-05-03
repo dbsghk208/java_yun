@@ -1,5 +1,6 @@
 package ch2;
 
+//변수값 교환
 public class VariableExchangeExample {
 
 	public static void main(String[] args) {
@@ -8,9 +9,9 @@ public class VariableExchangeExample {
 		
 		System.out.println("x: " + x + ", y: "+ y);
 		
-		int temp = x;
-		x = y;
-		y = temp;
+		int temp = x; //3
+		x = y;		  //5
+		y = temp;	  //3	
 		System.out.println("x: "+ x + ", y: "+ y);
 		
 
