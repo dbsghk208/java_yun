@@ -3,13 +3,13 @@ package ch2;
 public class StringExample {
 
 	public static void main(String[] args) {
-		String name = "È«±æµ¿";
-		String job = "ÇÁ·Î±×·¡¸Ó";
+		String name = "í™ê¸¸ë™";
+		String job = "í”„ë¡œê·¸ë˜ë¨¸";
 		
 		System.out.println(name);
 		System.out.println(job);
 		
-		String str= "³ª´Â \"ÀÚ¹Ù\"¸¦ ÁÁ¾ÆÇÕ´Ï´Ù.";
+		String str= "ë‚˜ëŠ”\nìë°”ë¥¼\nì¢‹ì•„í•©ë‹ˆë‹¤.";
 		System.out.println(str);
 	}
 
