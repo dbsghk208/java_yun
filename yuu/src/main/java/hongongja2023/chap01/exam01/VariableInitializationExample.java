@@ -14,6 +14,7 @@ public class VariableInitializationExample {
 	//	System.out.println(result);  
 		//--- value 변수가 값저장이 되지 않아 없는값+10 이 된 result 변수는 값을 읽을수 없음 컴파일 에러 발생함
 		
-		
+
 	}
+
 }
