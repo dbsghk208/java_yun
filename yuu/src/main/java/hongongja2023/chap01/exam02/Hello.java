@@ -1,4 +1,4 @@
-package hongongja2023.chap01;
+package hongongja2023.chap01.exam02;
 
 public class Hello {
 
