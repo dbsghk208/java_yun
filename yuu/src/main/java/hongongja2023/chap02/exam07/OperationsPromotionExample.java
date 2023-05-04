@@ -1,4 +1,4 @@
-package hongongja2023.chap03.exam05;
+package hongongja2023.chap02.exam07;
 
 public class OperationsPromotionExample {
 

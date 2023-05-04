@@ -1,4 +1,4 @@
-package hongongja2023.chap03.exam06;
+package hongongja2023.chap02.exam08;
 
 public class StringConcatExample {
 
